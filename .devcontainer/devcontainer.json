@@ -19,6 +19,7 @@
             // Add the IDs of extensions you want installed when the container is created.
             "extensions": [
                 "golang.go",
+                "please.please",
                 "eamodio.gitlens", // IDE Git information
                 "davidanson.vscode-markdownlint",
                 "ms-azuretools.vscode-docker", // Docker integration and linting
