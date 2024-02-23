@@ -10,8 +10,25 @@
 
 [parse]
 preloadsubincludes = ///go//build_defs:go
+preloadsubincludes = ///shell//build_defs:shell
+preloadsubincludes = ///docker//build_defs:docker
+preloadsubincludes = ///k8s//build_defs:k8s
 
 [Plugin "go"]
 Target = //plugins:go
 ImportPath = github.com/stan-dot/plz-k8s-and-docker
 GoTool = //third_party/go:toolchain|go
+
+[Plugin "shell"]
+Target = //plugins:shell
+
+[Plugin "docker"]
+Target = //plugins:docker
+
+[Plugin "k8s"]
+Target = //plugins:k8s
+
+[alias "deploy"]
+cmd = run sequential --include docker-build --include k8s-push
+; enable tab completion for build labels
+positionallabels = true
