@@ -14,4 +14,4 @@ preloadsubincludes = ///go//build_defs:go
 [Plugin "go"]
 Target = //plugins:go
 ImportPath = github.com/stan-dot/plz-k8s-and-docker
-GoTool = //third_party/go:toolchain/go
+GoTool = //third_party/go:toolchain|go

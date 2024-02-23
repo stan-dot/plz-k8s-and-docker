@@ -1,4 +1,4 @@
 go_toolchain(
     name = "toolchain",
-    version = "1.22",
+    version = "1.20",
 )
